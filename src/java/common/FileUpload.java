@@ -29,16 +29,12 @@ public class FileUpload {
 
             System.out.print("File Name :: "+ fileName);
             String extension = fileName.substring(fileName.indexOf(".")); 
-            
-            fileNewName = RandomNumberGenerator.getRendomNumber(9999, 99999)+extension ;
-            
+            fileNewName = RandomNumberGenerator.getRendomNumber(9999, 99999)+extension ;            
             out = new FileOutputStream(new File(path + File.separator
                     + fileNewName));
             filecontent = filePart.getInputStream();
-
             int read = 0;
             final byte[] bytes = new byte[1024];
-
             while ((read = filecontent.read(bytes)) != -1) {
                 out.write(bytes, 0, read);
             }

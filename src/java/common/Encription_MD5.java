@@ -29,8 +29,6 @@ public class Encription_MD5
    	     	hexString.append(hex);
     	}
     	System.out.println("Digest(in hex format):: " + hexString.toString());
-        
-        
         return hexString.toString();
     }
 }
