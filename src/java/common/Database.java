@@ -50,8 +50,7 @@ public class Database {
             Class.forName((String)dbCredential.get(1));
            
             connection = DriverManager.getConnection((String)dbCredential.get(2)+"?" +
-                                   "user="+(String)dbCredential.get(3)+"&password="+(String)dbCredential.get(4));
-            
+                                   "user="+(String)dbCredential.get(3)+"&password="+(String)dbCredential.get(4));            
             
         }catch(ClassNotFoundException | SQLException e){
             e.printStackTrace();
