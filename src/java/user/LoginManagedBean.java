@@ -7,6 +7,7 @@ package user;
 
 import common.Database;
 import common.Encription_MD5;
+import java.io.Serializable;
 import java.util.ArrayList;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
@@ -20,7 +21,7 @@ import javax.servlet.ServletContext;
  */
 @ManagedBean
 @SessionScoped
-public class LoginManagedBean {
+public class LoginManagedBean implements Serializable {
 
     public static String AUTH_KEY = null;
     /**

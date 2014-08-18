@@ -13,6 +13,7 @@ import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
+import javax.faces.event.AjaxBehaviorEvent;
 import javax.servlet.ServletContext;
 
 
@@ -36,6 +37,7 @@ public class SignupManagedBean implements Serializable {
      private String username;
      private String password;
      private String confirmpassword;
+     private String WARNING_MESSAGE;
     
     
     public SignupManagedBean() {
@@ -189,6 +191,12 @@ public class SignupManagedBean implements Serializable {
      */
     public void setConfirmpassword(String confirmpassword) {
         this.confirmpassword = confirmpassword;
+    }
+    
+    public String checkEmailExistance(AjaxBehaviorEvent e){
+    System.out.print("<------------------------- emailExist -------------------------->: "+email);
+    this.WARNING_MESSAGE = "<------------------------- emailExist -------------------------->: "+email;
+    return "abhishek";
     }
     
     
