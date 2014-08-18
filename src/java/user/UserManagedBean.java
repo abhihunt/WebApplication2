@@ -7,16 +7,8 @@
 package user;
 
 import common.Database;
-import common.Encription_MD5;
 import common.FileUpload;
-import common.RandomNumberGenerator;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.util.Arrays;
 import javax.el.ELException;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.context.FacesContext;
