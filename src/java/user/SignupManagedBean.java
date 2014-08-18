@@ -53,7 +53,6 @@ public class SignupManagedBean implements Serializable {
          int uid;
          String flag = null;
         
-        
         System.out.print("firstname :"+firstname);
         System.out.print("lastname :"+lastname );
         System.out.print("email :"+email );
@@ -72,12 +71,14 @@ public class SignupManagedBean implements Serializable {
             query = "INSERT INTO user( "+                               
                                 "user_name,"  +
                                 "email," +
+                                "user_image," +
                                 "user_username," +
                                 "user_password," +
                                 "user_status)" +                               
                             "VALUES("                               
                                 + "'"+firstname+" "+lastname+"',"
                                 + "'"+email+"',"
+                                + "'',"    
                                 + "'"+username+"',"
                                 + "'"+Encription_MD5.encription(password)+"',"
                                 + "'0'"

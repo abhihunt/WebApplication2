@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"          
+      >
+    <h:head>
+        <style>
+           input{margin-bottom: 0px ;}            
+           label{margin-bottom: 0px !important;}
+        </style>
+        
+    </h:head>
+    <h:body>
+ 
+    	<ui:composition template="/layout/baseLayout.xhtml">
+            <ui:define name="content">
+                
+                    <div class="row-fluid"> 
+                        <div class="container padding-30">    
+                            <p>&nbsp;</p>
+                            <div class="row-fluid feature-main-container">
+                                <div class="span12 feature-container left-margin-0">
+                                    <h:messages class="alert alert-success" globalOnly="true" />    
+
+                                <!-- Profile Page -->    
+                                <div class="span12 features left-margin-0">
+                                    <ul class="thumbnails">
+                                        <li class="span3">
+                                            <div class="meet-our-team">
+                                                <h3>Bob Nilson   <small>Chief Executive Officer / CEO</small></h3>
+                                                <img src="assets/img/pages/2.jpg" alt=""></img>
+                                                <div class="team-info">
+                                                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem...</p>
+                                                    <ul class="social-icons pull-right">
+                                                        <li><a href="#" data-original-title="twitter" class="twitter"></a></li>
+                                                        <li><a href="#" data-original-title="facebook" class="facebook"></a></li>
+                                                        <li><a href="#" data-original-title="linkedin" class="linkedin"></a></li>
+                                                        <li><a href="#" data-original-title="Goole Plus" class="googleplus"></a></li>
+                                                        <li><a href="#" data-original-title="skype" class="skype"></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </ui:define> 
+    	</ui:composition>
+ 
+    </h:body>
+ 
+</html>

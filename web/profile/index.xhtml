@@ -4,7 +4,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml"   
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:ui="http://java.sun.com/jsf/facelets"          
-      xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
     <h:head>
         <style>
@@ -27,10 +26,6 @@
 
                                 <!-- Profile Page -->    
                                 <div class="span12 features left-margin-0">
-                                        
-<!--                                           <span class="span2">
-                                                <h:graphicImage value="/resources/img/user/user.jpg" />
-                                            </span>-->
                                             
                                             <ul class="unstyled profile-nav span3 relative">
 						<li>
@@ -40,9 +35,7 @@
                                                    <c:if test="#{empty loginManagedBean.user_image}">
                                                     <h:graphicImage value="/resources/img/user/blank.jpg" /> 
                                                    </c:if> 
-                                                    
                                                     <a data-toggle="modal" href="#responsive" class="profile-edit">edit</a>
-                                                    
                                                 </li>
                                                 <li><a href="#">Profile</a></li>
                                                 <li><a href="#">Projects</a></li>
@@ -50,6 +43,10 @@
 						<li><a href="#">Friends</a></li>
                                                 <li><a href="#">Photos</a></li>
 						<li><a href="#">Settings</a></li>
+                                                <li>
+                                                    <h:link class=""  value="" outcome="/profile/allusers" >All Users</h:link>
+                                                </li>
+                                                
 					    </ul>
                                             
                                             <!-- Profile Right -->  
