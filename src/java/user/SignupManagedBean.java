@@ -9,6 +9,7 @@ package user;
 import common.Database;
 import common.Encription_MD5;
 import java.io.Serializable;
+import java.util.ArrayList;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
@@ -193,10 +194,30 @@ public class SignupManagedBean implements Serializable {
         this.confirmpassword = confirmpassword;
     }
     
-    public String checkEmailExistance(AjaxBehaviorEvent e){
-    System.out.print("<------------------------- emailExist -------------------------->: "+email);
-  //  this.setWARNING_MESSAGE("<------------------------- emailExist -------------------------->: "+email);
-    return "abhishek";
+    public void checkEmailExistance(AjaxBehaviorEvent e){
+        
+        ArrayList data = null;
+        String query;
+        
+        ServletContext ctx = (ServletContext) FacesContext.getCurrentInstance()
+                                .getExternalContext().getContext();
+        String realPath = ctx.getRealPath("/");
+        Database db = new Database(realPath) ;
+        
+        query = "SELECT "                        
+                        + "user_id"
+                        + " FROM user"
+                        + " WHERE  email = '" + email + "'";
+
+                System.out.print("QUERY -----> " + query);
+                data = db.db_setect(query);
+
+                if (data != null && data.size() > 0) {
+                    this.setWARNING_MESSAGE(email+" already exist !");   
+                    System.out.print("<------ Email Already Exist ------------>: "+email);
+                }else{
+                    System.out.print("<------ Email Not Exist in DB ------------>: "+email);
+                }   
     }
     
     
