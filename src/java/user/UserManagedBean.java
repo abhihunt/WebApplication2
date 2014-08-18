@@ -98,7 +98,6 @@ public class UserManagedBean {
                 if(qryResult == 1) {
                     String oldFileName = bean.getUser_image();
                     fileUpolad.removeFile(path,oldFileName);
-                    
                     bean.setUser_image(uploadFileName);
                 }        
     }
