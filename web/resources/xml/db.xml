@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+
+<database>
+	
+        <selected-provider>
+            <provider-name>MYSQL</provider-name> 
+        </selected-provider>
+        
+        <provider id="MYSQL">
+		<driver>com.mysql.jdbc.Driver</driver>
+		<connectionString>jdbc:mysql://localhost:3306/jsfApp</connectionString>
+		<user>root</user>
+		<password></password>
+	</provider>
+        
+	<provider id="SQLSERVER">
+		<driver></driver>
+		<connectionString></connectionString>
+		<user></user>
+		<password></password>
+	</provider>
+        
+        <provider id="ORACLE">
+		<driver></driver>
+		<connectionString></connectionString>
+		<user></user>
+		<password></password>
+	</provider>
+        
+</database>

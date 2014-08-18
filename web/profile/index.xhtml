@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"          
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <style>
+           input{margin-bottom: 0px ;}            
+           label{margin-bottom: 0px !important;}
+        </style>
+        
+    </h:head>
+    <h:body>
+ 
+    	<ui:composition template="/layout/baseLayout.xhtml">
+ 
+    		<ui:define name="content">
+                    <div class="row-fluid"> 
+                        <div class="container padding-30">    
+                            <p>&nbsp;</p>
+                            <div class="row-fluid feature-main-container">
+                                <div class="span12 feature-container left-margin-0">
+                                    <h:messages class="alert alert-success" globalOnly="true" />    
+
+                                <!-- Profile Page -->    
+                                <div class="span12 features left-margin-0">
+                                        
+<!--                                           <span class="span2">
+                                                <h:graphicImage value="/resources/img/user/user.jpg" />
+                                            </span>-->
+                                            
+                                            <ul class="unstyled profile-nav span3 relative">
+						<li>
+                                                   <c:if test="#{not empty loginManagedBean.user_image}">
+                                                    <h:graphicImage value="/resources/img/user/#{loginManagedBean.user_image}" /> 
+                                                   </c:if> 
+                                                   <c:if test="#{empty loginManagedBean.user_image}">
+                                                    <h:graphicImage value="/resources/img/user/blank.jpg" /> 
+                                                   </c:if> 
+                                                    
+                                                    <a data-toggle="modal" href="#responsive" class="profile-edit">edit</a>
+                                                    
+                                                </li>
+                                                <li><a href="#">Profile</a></li>
+                                                <li><a href="#">Projects</a></li>
+						<li><a href="#">Messages <span>3</span></a></li>
+						<li><a href="#">Friends</a></li>
+                                                <li><a href="#">Photos</a></li>
+						<li><a href="#">Settings</a></li>
+					    </ul>
+                                            
+                                            <!-- Profile Right -->  
+                                            <div class="span9 padding-10">
+                                                <span class="profile-info">
+                                                    <h:outputLabel class="profile-title"  value="#{loginManagedBean.user_name}" > 
+                                                    <span class="badge badge-info pull-right">User</span>
+                                                    </h:outputLabel>
+                                                    <p class="description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt laoreet dolore magna aliquam tincidunt erat volutpat laoreet dolore magna aliquam tincidunt erat volutpat.</p>
+                                                        <p><a href="#">www.mywebsite.com</a></p>
+                                                            <ul class="unstyled inline ">
+                                                                    <li><i class="icon-map-marker"></i> Spain</li>
+                                                                    <li><i class="icon-calendar"></i> 18 Jan 1982</li>
+                                                                    <li><i class="icon-briefcase"></i> Design</li>
+                                                                    <li><i class="icon-star"></i> Top Seller</li>
+                                                                    <li><i class="icon-heart"></i> BASE Jumping</li>
+                                                            </ul>                                               
+                                                </span>
+                                                <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+                                                <!-- Dashboard -->
+                                                <div class="span12 left-margin-0">
+
+                                                        <a href="#" class="icon-btn span3">
+                                                           <i class="icon-money"><i></i></i>
+                                                           <div>Finance</div>
+                                                           <span class="badge badge-success">4</span>
+                                                       </a>
+
+                                                       <a href="#" class="icon-btn span3">
+                                                           <i class="icon-plane"></i>
+                                                           <div>Projects</div>
+                                                           <span class="badge badge-info">21</span>
+                                                       </a>
+                                                       <a href="#" class="icon-btn span3">
+                                                           <i class="icon-thumbs-up"></i>
+                                                           <div>Feedback</div>
+                                                           <span class="badge badge-info">2</span>
+                                                       </a>
+                                                       <a href="#" class="icon-btn span3">
+                                                           <i class="icon-cloud"></i>
+                                                           <div>Servers</div>
+                                                           <span class="badge badge-important">2</span>
+                                                       </a>
+                                                       <a href="#" class="icon-btn span3 left-margin-0">
+                                                           <i class="icon-globe"></i>
+                                                           <div>Regions</div>
+                                                       </a>
+                                                       <a href="#" class="icon-btn span3">
+                                                           <i class="icon-heart-empty"></i>
+                                                           <div>Popularity</div>
+                                                       <span class="badge badge-info">221</span>
+                                                       </a>
+                                                    
+                                                        <a href="#" class="icon-btn span3">
+                                                           <i class="icon-globe"></i>
+                                                           <div>Regions</div>
+                                                        </a>
+                                                        <a href="#" class="icon-btn span3">
+                                                           <i class="icon-heart-empty"></i>
+                                                           <div>Popularity</div>
+                                                       <span class="badge badge-info">221</span>
+                                                       </a>
+
+                                                    </div>
+                                                <!-- Dashboard End -->                                            
+                                            </div>
+                                            <!-- Profile Right End -->                                      
+                                </div>
+                                <!-- Profile page End -->  
+                                
+                                </div>                           
+                            </div>    
+                             <p>&nbsp;</p><p>&nbsp;</p>
+                        </div>
+                    </div>    
+                    
+                    
+                    <!-- MODEL START -->
+                    
+                    <div id="responsive" class="modal hide fade in features" tabindex="-1" data-width="760" aria-hidden="false" >
+                                
+                        <h:form title="userForm" enctype="multipart/form-data" >
+                                
+                                <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+					<p class="heading">Upload your profile image</p>
+				</div>
+                            
+				<div class="modal-body">                                                                       
+
+                                    <h:inputFile class="btn-file"  value="#{userManagedBean.file_upload}"/>
+                                    
+                                </div>
+                            
+				<div class="modal-footer">
+					<button type="button" data-dismiss="modal" class="btn gray">Close</button>
+                                        <h:commandButton class="btn orrange" 
+                                                         value="Save changes" 
+                                                         action="#{userManagedBean.upload}"
+                                        />
+				</div>
+                        </h:form>
+		    </div>
+                    
+                    <!-- MODEL END -->
+                    
+                    
+    		</ui:define>
+ 
+    	</ui:composition>
+ 
+    </h:body>
+ 
+</html>

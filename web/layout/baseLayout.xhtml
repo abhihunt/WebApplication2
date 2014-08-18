@@ -1,0 +1,120 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      >      
+    <h:head>
+
+        <title>#{request.contextPath}</title>
+        
+        <h:outputStylesheet name="/css/bootstrap.css" />
+        <h:outputStylesheet name="/css/bootstrap-responsive.css" />
+        <h:outputStylesheet name="/css/bootstrap-datetimepicker.min.css" />
+        <h:outputStylesheet name="/css/btn-file.css" />
+        <h:outputStylesheet name="/css/front.css" />
+        <h:outputScript name="/js/jquery-1.8.3.min.js"></h:outputScript>
+        <h:outputStylesheet name="css/uniform.default.css"/>
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        <script src="/TaskGuru/js/html5shiv.js"></script>
+        <![endif]-->
+        <!-- Fav and touch icons -->
+        
+        <script type="text/javascript">
+
+            $(document).ready(function(e) {
+
+                    $('#signup').click(function(e) {		
+                                    $('.sub-header').slideToggle('hide');
+                                    $('body,html').animate({scrollTop: 0}, 100); 	
+
+                });
+                
+                $(".alert").fadeOut(8000);
+
+            });
+
+            </script> 
+        
+        
+    </h:head>    
+    <h:body>
+ 
+	<div id="page">
+ 
+	    <div id="header">
+		<ui:insert name="header" >
+                    <ui:include src="/layout/header.xhtml" />
+		</ui:insert>
+	    </div>
+            
+	    <div id="content">
+	  	<ui:insert name="content" >
+                    <ui:include src="/layout/content.xhtml" />
+	   	</ui:insert>
+	    </div>
+ 
+	    <div id="footer">
+	    	<ui:insert name="footer" >
+                    <ui:include src="/layout/footer.xhtml" />
+	    	</ui:insert>
+    	    </div>
+ 
+        </div>
+ 
+    </h:body>
+    
+ <script type="text/javascript">
+	
+	
+
+ 
+   !function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel({			  
+			  interval: 1100,			 	
+		  })  
+		 
+        })
+    /*
+    jQuery('#mycarousel').jcarousel({
+    start: 3, // Configuration goes here
+    wrap: "circular",
+    scroll: 1,
+    auto:3,
+    vertical:false,
+    buttonNextHTML: null,
+    buttonPrevHTML: null,
+    initCallback: function(c) {
+    carousel_2 = c;
+}
+		*/
+      }(window.jQuery)
+    
+
+	
+</script>
+       
+    
+<h:outputScript name="/js/bootstrap-transition.js"></h:outputScript>
+<h:outputScript name="/js/bootstrap-alert.js"></h:outputScript>
+<h:outputScript name="/js/bootstrap-modal.js"></h:outputScript>
+<h:outputScript name="/js/bootstrap-dropdown.js"></h:outputScript>
+<h:outputScript name="/js/bootstrap-scrollspy.js"></h:outputScript>
+<h:outputScript name="/js/jquery-ui-1.10.1.custom.min.js"></h:outputScript>
+<h:outputScript name="/js/jquery.slimscroll.js"></h:outputScript>
+<h:outputScript name="/js/bootstrap-datetimepicker.min.js"></h:outputScript>
+<h:outputScript name="/js/bootstrap-datetimepicker.fr.js"></h:outputScript>
+<h:outputScript name="/js/bootstrap-tab.js"></h:outputScript>
+<h:outputScript name="/js/bootstrap-tooltip.js"></h:outputScript>
+<h:outputScript name="/js/bootstrap-button.js"></h:outputScript>
+<h:outputScript name="/js/bootstrap-collapse.js"></h:outputScript>
+<h:outputScript name="/js/bootstrap-typeahead.js"></h:outputScript>
+<h:outputScript name="/js/bootstrap-carousel.js"></h:outputScript>
+<h:outputScript name="/js/holder.js"></h:outputScript>
+<h:outputScript name="/js/jquery.validate.min.js"></h:outputScript>
+<h:outputScript name="/js/jquery.uniform.js"></h:outputScript>
+    
+</html>

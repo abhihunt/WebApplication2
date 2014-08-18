@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"          
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <style>
+           input{margin-bottom: 0px ;} 
+            
+        </style>
+        
+    </h:head>
+    <h:body>
+ 
+    	<ui:composition template="/layout/baseLayout.xhtml">
+ 
+    		<ui:define name="content">
+                    <div class="row-fluid"> 
+                        <div class="container padding-30">    
+                            <p>&nbsp;</p><p>&nbsp;</p>
+                            <div class="row-fluid feature-main-container">
+                                
+                                <div class="span12 feature-container">                                                                                                                           
+                                        <h:messages class="alert alert-success" globalOnly="true" />                                          
+                                </div>
+                                
+                                <div class="span12 feature-container left-margin-0">
+
+                                    <div class="span5 features center">
+                                            <div class="span12">
+                                                <h:graphicImage value="/resources/img/support.png" /> 
+                                            </div>
+                                            <p>&nbsp;</p>
+                                            <div class="span12 left-margin-0">
+                                                <p class="description">Budget for every project, big or small. Lorem Ipsum is simply dummy text of the priting and typesetting industry.Loren lipsum has been</p>
+                                            </div>
+                                    </div>
+                                    
+                                <div class="span7 features " style="border-left: 1px dotted #E5E5E6;padding-left: 20px;">
+                                        <div class="span12">
+                                            <span class="span2">
+                                                <h:graphicImage value="/resources/img/login.jpg" />
+                                            </span>
+                                            <span class="span8 left-margin-0">
+                                                <p class="login-title">Login Here ..</p>
+                                            </span>
+                                        </div>
+                                    
+                                    <div class="span12 left-margin-0">
+                                        <p class="description">Budget for every project, big or small. Lorem Ipsum is simply dummy text of the priting and typesetting industry.Loren lipsum has been</p>
+                                    </div>
+                                    
+                                    <div class="span12 left-margin-0">
+                                        <div class="span12"> 
+                                            <h:form class="span9 login-form">
+                                                <div class="control-group">
+                                                    <div class="control"> 
+                                                        <div class="control-group">
+                                                            <h:outputLabel  value="User Name "/>
+                                                            <h:inputText class="no-radius span12" style="margin-bottom: 0px;" id="username" required="true" value="#{loginManagedBean.userName}" requiredMessage="Field is required"/> 
+                                                            <h:message for="username" styleClass="error"/>
+                                                        </div>
+                                                    </div>                                                    
+                                                </div>
+                                                
+                                                <div class="control-group">
+                                                    <div class="control"> 
+                                                        <div class="control-group">
+                                                            <h:outputLabel  value="Password"/>
+                                                            <h:inputSecret class="span12" style="margin-bottom: 0px;"  id="password" value="#{loginManagedBean.password}"  required="true" requiredMessage="Field is required"/>
+                                                            <h:message for="password" styleClass="error "/>
+                                                        </div>
+                                                    </div>                                                    
+                                                </div>
+                                                
+                                                <div class="control-group">
+                                                    <div class="control"> 
+                                                        <div class="control-group">
+                                                            <h:commandButton value="Signin" class="btn mini orrange" action="#{loginManagedBean.userAuthetication}"/>
+                                                        </div>
+                                                    </div>                                                    
+                                                </div>
+                                                
+                                            </h:form>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                
+                                
+                             </div>
+                            <p>&nbsp;</p><p>&nbsp;</p>
+                        </div>    
+                    </div>
+    		</ui:define>
+ 
+    	</ui:composition>
+ 
+    </h:body>
+ 
+</html>

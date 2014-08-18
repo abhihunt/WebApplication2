@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:ui="http://java.sun.com/jsf/facelets"          
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    
+    
+    <body>
+	    <ui:composition>
+ 
+		<div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container" style="max-width:none;">
+        <div class="container">
+           <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+          </button>
+          
+          
+            <a class="brand" href="#{request.contextPath}">
+              <h:graphicImage value="/resources/img/oracle2.png"/>
+          </a>
+          <div class="pull-right nav-container">          
+         	<div class="nav-collapse collapse">
+             <ul class="nav">
+              <li><a href="#{request.contextPath}">Home</a></li>
+              
+              
+              
+              <li class="dropdown">
+                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories <!-- <b class="caret"></b> --></a>
+                        <ul class="dropdown-menu">
+                         	  <li class="nav-header">Select Series</li>                             
+                              <li class="divider"></li>
+                              <li><a href="#">880 Series</a></li>
+                              <li><a href="#">780 Series</a></li>
+                              <li><a href="#">680 Series</a></li>                             
+                              <li><a href="#">One more separated link</a></li>
+                        </ul>
+              </li>
+              
+              
+              <li class="dropdown">
+                  <a  href="#" class="dropdown-toggle" data-toggle="dropdown">Freelancer <!-- <b class="caret"></b> --></a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-header">All Features</li>   
+                        <li class="divider"></li> 
+                        <li><a href="#">Jets</a></li>
+                        <li><a href="#">Colors</a></li>
+                        <li><a href="#">Lighting</a></li>
+                        <li><a href="#">Seating</a></li>
+                        <li><a href="#">Stereos</a></li>
+                        <li><a href="#">Hot Tub Covers</a></li>
+                        <li><a href="#">Controls</a></li>
+                        <li><a href="#">CLEARRAY® Water System</a></li>
+                        <li><a href="#">Purification</a></li>
+                  </ul>
+              </li> 
+              
+              <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Find Work <!-- <b class="caret"></b> --></a>
+                        <ul class="dropdown-menu">
+                             <li class="nav-header">ACCESSORIES</li>	
+                             <li class="divider"></li>                             
+                              <li><a href="#">Action</a></li>
+                              <li><a href="#">Another action</a></li>
+                              <li><a href="#">Something else here</a></li>                              
+                              <li><a href="#">Separated link</a></li>
+                              <li><a href="#">One more separated link</a></li>
+                        </ul>
+              </li>
+             
+             
+              
+              <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">How it works <!--<b class="caret"></b> --></a>
+                        <ul class="dropdown-menu">
+                               <li><a href="#">Contact Us</a></li> 
+                             
+                               <li><a href="#">General Enquiry</a></li>                       
+                               <li><a href="#">Locate Us</a></li>  
+                               <li class="divider"></li>  
+                               <li><a href="#">Terms</a></li> 
+                               <li><a href="#">Privacy</a></li>
+                               <li class="nav-header">Nav header</li>
+                             
+                        </ul>
+              </li>
+             <li>
+                 <h:form id="helloForm1">
+                 
+                    <div class="text-right" style="margin-top: 10px; padding:4px 0;">   
+                         <c:if test="#{empty loginManagedBean.user_name}">
+                            <a id='signup' class="btn mini orrange" href="javascript:void(0);">Signup</a>
+                            <h:commandButton class="btn mini gray" style="margin-left:8px "   action="signin" value="Signin">
+                                <param name="pageId" value="1"></param>
+                            </h:commandButton>   
+                        </c:if>
+                        <c:if test="#{not empty loginManagedBean.user_name}">
+                           
+                                <h:link class="btn mini orrange"  value="" outcome="/profile/index" >
+                                    <h:outputLabel class="welcome-label" value="Hi, #{ loginManagedBean.user_name.substring(0,8)}" /> 
+                                </h:link>
+                           
+                            <div class="btn-group dropdown" style="margin:auto">
+                                <a class="btn dropdown-toggle" data-toggle="dropdown" href="/TaskGuru/myaccount">                                     
+                                    <h:graphicImage value="/resources/img/settings-dropdown.png" /> 
+                                </a>
+
+                                <ul class="dropdown-menu text-left" style="min-width: 125px;left: -72px;">                                   
+                                    
+                                    <li><h:link value="Profile" outcome="/profile/index"></h:link></li>
+                                    <li><h:link value="Help" outcome="/profile/index" ></h:link></li>
+                                    <li class="divider"></li>
+                                    <li><h:commandLink value="Logout"  action="#{loginManagedBean.logout}" ></h:commandLink></li>
+                                    
+                                    <!-- dropdown menu links -->
+                                </ul>
+                            </div>
+                        </c:if>
+                        
+                   </div>  
+                     
+                 </h:form>    
+            </li>
+            </ul>
+           </div>
+           
+               
+          </div>
+        </div>
+      </div>
+    </div>
+                </div>
+     
+   
+    
+    
+    <header class="sub-header hide">
+    	<div class="container text-right">            
+            <ul class="unstyled inline">                    
+                    <li class="" style="border-right:1px solid #999;">
+                        <h:link value="As client" outcome="/user/signup" ></h:link>
+                       
+                    </li>
+                    <li class="">
+                        <h:link value="As Merchant" outcome="/user/signup" ></h:link>                        
+                    </li>
+            </ul>        
+        </div>
+    </header>
+ 
+	    </ui:composition>
+    </body>
+</html>
