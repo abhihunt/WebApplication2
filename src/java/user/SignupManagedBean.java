@@ -195,7 +195,7 @@ public class SignupManagedBean implements Serializable {
     
     public String checkEmailExistance(AjaxBehaviorEvent e){
     System.out.print("<------------------------- emailExist -------------------------->: "+email);
-    this.WARNING_MESSAGE = "<------------------------- emailExist -------------------------->: "+email;
+  //  this.setWARNING_MESSAGE("<------------------------- emailExist -------------------------->: "+email);
     return "abhishek";
     }
     
@@ -208,5 +208,21 @@ public class SignupManagedBean implements Serializable {
      this.password ="";
      this.confirmpassword="";
 }
+
+    /**
+     * @return the WARNING_MESSAGE
+     */
+    public String getWARNING_MESSAGE() {
+        return WARNING_MESSAGE;
+    }
+
+    /**
+     * @param WARNING_MESSAGE the WARNING_MESSAGE to set
+     */
+    public void setWARNING_MESSAGE(String WARNING_MESSAGE) {
+        this.WARNING_MESSAGE = WARNING_MESSAGE;
+    }
+
+  
     
 }
