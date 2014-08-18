@@ -88,10 +88,14 @@
                                                                              required="true" 
                                                                              requiredMessage="Please enter your email address."
                                                                              validatorMessage="Invalid email format">
+                                                                    <f:ajax event="keypress" execute="email" render="emailcheck" listener=""></f:ajax>
+
+                                                                    
                                                                     <f:validateRegex
                                                                             pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$" />
 
                                                                 </h:inputText>
+                                                                <h:outputText id="emailcheck" value="#{signupManagedBean.email}"></h:outputText>
                                                                 <h:message for="email" styleClass="error"/>
                                                             </div>
                                                         </div>                                                    
