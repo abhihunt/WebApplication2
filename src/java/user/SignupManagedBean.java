@@ -216,6 +216,7 @@ public class SignupManagedBean implements Serializable {
                     this.setWARNING_MESSAGE(email+" already exist !");   
                     System.out.print("<------ Email Already Exist ------------>: "+email);
                 }else{
+                    this.setWARNING_MESSAGE(""); 
                     System.out.print("<------ Email Not Exist in DB ------------>: "+email);
                 }   
     }
