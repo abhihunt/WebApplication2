@@ -140,7 +140,8 @@
                             
 				<div class="modal-body">                                                                       
 
-                                    <h:inputFile class="btn-file"  value="#{userManagedBean.file_upload}"/>
+                                    <h:inputFile class="btn-file" id="profileimage"  value="#{userManagedBean.file_upload}" required="true" requiredMessage="Field is required"/>
+                                    <h:message for="profileimage" styleClass="error"/>
                                     
                                 </div>
                             
