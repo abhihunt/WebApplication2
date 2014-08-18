@@ -131,16 +131,16 @@ public class LoginManagedBean {
                     context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Welcome , " + getUser_name(), null));
                 } else {
                     flag = "fail";
-                    context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "ERROR : Invalid User name or Password ", null));
+                    context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "ERROR : Invalid User name or Password ", null));
                 }
 
             } else {
                 flag = "fail";
-                context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "ERROR : No Record Found ", null));
+                context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "ERROR : No Record Found ", null));
             }
         } catch (Exception e) {
             System.out.print("<---------------------------in Catch-------------------------------->");
-            context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "ERROR : " + e.getMessage(), null));
+            context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "ERROR : " + e.getMessage(), null));
             flag = "fail";
             e.printStackTrace();
         }
