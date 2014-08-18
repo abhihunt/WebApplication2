@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:ui="http://java.sun.com/jsf/facelets"          
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <body>
+	    <ui:composition>
+                <ul class="unstyled profile-nav span3 relative">
+						<li>
+                                                   <c:if test="#{not empty loginManagedBean.user_image}">
+                                                    <h:graphicImage value="/resources/img/user/#{loginManagedBean.user_image}" /> 
+                                                   </c:if> 
+                                                   <c:if test="#{empty loginManagedBean.user_image}">
+                                                    <h:graphicImage value="/resources/img/user/blank.jpg" /> 
+                                                   </c:if> 
+                                                    <a data-toggle="modal" href="#responsive" class="profile-edit">edit</a>
+                                                </li>
+                                                <li><a href="#">Profile</a></li>
+                                                <li><a href="#">Projects</a></li>
+						<li><a href="#">Messages <span>3</span></a></li>
+						<li><a href="#">Friends</a></li>
+                                                <li><a href="#">Photos</a></li>
+						<li><a href="#">Settings</a></li>
+                                                <li>
+                                                    <h:link class=""  value="" outcome="/profile/allusers" >All Users</h:link>
+                                                </li>
+                                                
+		 </ul>
+            </ui:composition>
+    </body>
+    
+ </html>
+	   
