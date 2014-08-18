@@ -204,10 +204,10 @@ public class SignupManagedBean implements Serializable {
         String realPath = ctx.getRealPath("/");
         Database db = new Database(realPath) ;
         
-        query = "SELECT "                        
-                        + "user_id"
-                        + " FROM user"
-                        + " WHERE  email = '" + email + "'";
+        query =   " SELECT "                        
+                + " user_id "
+                + " FROM user"
+                + " WHERE  email = '" + email + "'";
 
                 System.out.print("QUERY -----> " + query);
                 data = db.db_setect(query);
